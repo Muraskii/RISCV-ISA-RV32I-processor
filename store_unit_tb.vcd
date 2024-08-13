@@ -1,0 +1,459 @@
+$date
+	Tue Jul 02 08:44:00 2024
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module tb_store_unit $end
+$var reg 3 ! funct3_in [2:0] $end
+$var reg 32 " iadder_in [31:0] $end
+$var reg 1 # ahb_ready_in $end
+$var reg 32 $ rs2_in [31:0] $end
+$var reg 1 % mem_wr_req_in $end
+$var wire 1 & ms_riscv32_mp_dmdata_out [31] $end
+$var wire 1 ' ms_riscv32_mp_dmdata_out [30] $end
+$var wire 1 ( ms_riscv32_mp_dmdata_out [29] $end
+$var wire 1 ) ms_riscv32_mp_dmdata_out [28] $end
+$var wire 1 * ms_riscv32_mp_dmdata_out [27] $end
+$var wire 1 + ms_riscv32_mp_dmdata_out [26] $end
+$var wire 1 , ms_riscv32_mp_dmdata_out [25] $end
+$var wire 1 - ms_riscv32_mp_dmdata_out [24] $end
+$var wire 1 . ms_riscv32_mp_dmdata_out [23] $end
+$var wire 1 / ms_riscv32_mp_dmdata_out [22] $end
+$var wire 1 0 ms_riscv32_mp_dmdata_out [21] $end
+$var wire 1 1 ms_riscv32_mp_dmdata_out [20] $end
+$var wire 1 2 ms_riscv32_mp_dmdata_out [19] $end
+$var wire 1 3 ms_riscv32_mp_dmdata_out [18] $end
+$var wire 1 4 ms_riscv32_mp_dmdata_out [17] $end
+$var wire 1 5 ms_riscv32_mp_dmdata_out [16] $end
+$var wire 1 6 ms_riscv32_mp_dmdata_out [15] $end
+$var wire 1 7 ms_riscv32_mp_dmdata_out [14] $end
+$var wire 1 8 ms_riscv32_mp_dmdata_out [13] $end
+$var wire 1 9 ms_riscv32_mp_dmdata_out [12] $end
+$var wire 1 : ms_riscv32_mp_dmdata_out [11] $end
+$var wire 1 ; ms_riscv32_mp_dmdata_out [10] $end
+$var wire 1 < ms_riscv32_mp_dmdata_out [9] $end
+$var wire 1 = ms_riscv32_mp_dmdata_out [8] $end
+$var wire 1 > ms_riscv32_mp_dmdata_out [7] $end
+$var wire 1 ? ms_riscv32_mp_dmdata_out [6] $end
+$var wire 1 @ ms_riscv32_mp_dmdata_out [5] $end
+$var wire 1 A ms_riscv32_mp_dmdata_out [4] $end
+$var wire 1 B ms_riscv32_mp_dmdata_out [3] $end
+$var wire 1 C ms_riscv32_mp_dmdata_out [2] $end
+$var wire 1 D ms_riscv32_mp_dmdata_out [1] $end
+$var wire 1 E ms_riscv32_mp_dmdata_out [0] $end
+$var wire 1 F ms_riscv32_mp_dmaddr_out [31] $end
+$var wire 1 G ms_riscv32_mp_dmaddr_out [30] $end
+$var wire 1 H ms_riscv32_mp_dmaddr_out [29] $end
+$var wire 1 I ms_riscv32_mp_dmaddr_out [28] $end
+$var wire 1 J ms_riscv32_mp_dmaddr_out [27] $end
+$var wire 1 K ms_riscv32_mp_dmaddr_out [26] $end
+$var wire 1 L ms_riscv32_mp_dmaddr_out [25] $end
+$var wire 1 M ms_riscv32_mp_dmaddr_out [24] $end
+$var wire 1 N ms_riscv32_mp_dmaddr_out [23] $end
+$var wire 1 O ms_riscv32_mp_dmaddr_out [22] $end
+$var wire 1 P ms_riscv32_mp_dmaddr_out [21] $end
+$var wire 1 Q ms_riscv32_mp_dmaddr_out [20] $end
+$var wire 1 R ms_riscv32_mp_dmaddr_out [19] $end
+$var wire 1 S ms_riscv32_mp_dmaddr_out [18] $end
+$var wire 1 T ms_riscv32_mp_dmaddr_out [17] $end
+$var wire 1 U ms_riscv32_mp_dmaddr_out [16] $end
+$var wire 1 V ms_riscv32_mp_dmaddr_out [15] $end
+$var wire 1 W ms_riscv32_mp_dmaddr_out [14] $end
+$var wire 1 X ms_riscv32_mp_dmaddr_out [13] $end
+$var wire 1 Y ms_riscv32_mp_dmaddr_out [12] $end
+$var wire 1 Z ms_riscv32_mp_dmaddr_out [11] $end
+$var wire 1 [ ms_riscv32_mp_dmaddr_out [10] $end
+$var wire 1 \ ms_riscv32_mp_dmaddr_out [9] $end
+$var wire 1 ] ms_riscv32_mp_dmaddr_out [8] $end
+$var wire 1 ^ ms_riscv32_mp_dmaddr_out [7] $end
+$var wire 1 _ ms_riscv32_mp_dmaddr_out [6] $end
+$var wire 1 ` ms_riscv32_mp_dmaddr_out [5] $end
+$var wire 1 a ms_riscv32_mp_dmaddr_out [4] $end
+$var wire 1 b ms_riscv32_mp_dmaddr_out [3] $end
+$var wire 1 c ms_riscv32_mp_dmaddr_out [2] $end
+$var wire 1 d ms_riscv32_mp_dmaddr_out [1] $end
+$var wire 1 e ms_riscv32_mp_dmaddr_out [0] $end
+$var wire 1 f ms_riscv32_mp_dmwr_mask_out [3] $end
+$var wire 1 g ms_riscv32_mp_dmwr_mask_out [2] $end
+$var wire 1 h ms_riscv32_mp_dmwr_mask_out [1] $end
+$var wire 1 i ms_riscv32_mp_dmwr_mask_out [0] $end
+$var wire 1 j ms_riscv32_mp_dmwr_req_out $end
+$var wire 1 k ahb_htrans_out [1] $end
+$var wire 1 l ahb_htrans_out [0] $end
+
+$scope module uut $end
+$var wire 1 m funct3_in [2] $end
+$var wire 1 n funct3_in [1] $end
+$var wire 1 o funct3_in [0] $end
+$var wire 1 p iadder_in [31] $end
+$var wire 1 q iadder_in [30] $end
+$var wire 1 r iadder_in [29] $end
+$var wire 1 s iadder_in [28] $end
+$var wire 1 t iadder_in [27] $end
+$var wire 1 u iadder_in [26] $end
+$var wire 1 v iadder_in [25] $end
+$var wire 1 w iadder_in [24] $end
+$var wire 1 x iadder_in [23] $end
+$var wire 1 y iadder_in [22] $end
+$var wire 1 z iadder_in [21] $end
+$var wire 1 { iadder_in [20] $end
+$var wire 1 | iadder_in [19] $end
+$var wire 1 } iadder_in [18] $end
+$var wire 1 ~ iadder_in [17] $end
+$var wire 1 !! iadder_in [16] $end
+$var wire 1 "! iadder_in [15] $end
+$var wire 1 #! iadder_in [14] $end
+$var wire 1 $! iadder_in [13] $end
+$var wire 1 %! iadder_in [12] $end
+$var wire 1 &! iadder_in [11] $end
+$var wire 1 '! iadder_in [10] $end
+$var wire 1 (! iadder_in [9] $end
+$var wire 1 )! iadder_in [8] $end
+$var wire 1 *! iadder_in [7] $end
+$var wire 1 +! iadder_in [6] $end
+$var wire 1 ,! iadder_in [5] $end
+$var wire 1 -! iadder_in [4] $end
+$var wire 1 .! iadder_in [3] $end
+$var wire 1 /! iadder_in [2] $end
+$var wire 1 0! iadder_in [1] $end
+$var wire 1 1! iadder_in [0] $end
+$var wire 1 2! ahb_ready_in $end
+$var wire 1 3! rs2_in [31] $end
+$var wire 1 4! rs2_in [30] $end
+$var wire 1 5! rs2_in [29] $end
+$var wire 1 6! rs2_in [28] $end
+$var wire 1 7! rs2_in [27] $end
+$var wire 1 8! rs2_in [26] $end
+$var wire 1 9! rs2_in [25] $end
+$var wire 1 :! rs2_in [24] $end
+$var wire 1 ;! rs2_in [23] $end
+$var wire 1 <! rs2_in [22] $end
+$var wire 1 =! rs2_in [21] $end
+$var wire 1 >! rs2_in [20] $end
+$var wire 1 ?! rs2_in [19] $end
+$var wire 1 @! rs2_in [18] $end
+$var wire 1 A! rs2_in [17] $end
+$var wire 1 B! rs2_in [16] $end
+$var wire 1 C! rs2_in [15] $end
+$var wire 1 D! rs2_in [14] $end
+$var wire 1 E! rs2_in [13] $end
+$var wire 1 F! rs2_in [12] $end
+$var wire 1 G! rs2_in [11] $end
+$var wire 1 H! rs2_in [10] $end
+$var wire 1 I! rs2_in [9] $end
+$var wire 1 J! rs2_in [8] $end
+$var wire 1 K! rs2_in [7] $end
+$var wire 1 L! rs2_in [6] $end
+$var wire 1 M! rs2_in [5] $end
+$var wire 1 N! rs2_in [4] $end
+$var wire 1 O! rs2_in [3] $end
+$var wire 1 P! rs2_in [2] $end
+$var wire 1 Q! rs2_in [1] $end
+$var wire 1 R! rs2_in [0] $end
+$var wire 1 S! mem_wr_req_in $end
+$var reg 32 T! ms_riscv32_mp_dmdata_out [31:0] $end
+$var reg 32 U! ms_riscv32_mp_dmaddr_out [31:0] $end
+$var reg 4 V! ms_riscv32_mp_dmwr_mask_out [3:0] $end
+$var reg 1 W! ms_riscv32_mp_dmwr_req_out $end
+$var reg 2 X! ahb_htrans_out [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 !
+b0 "
+0#
+b0 $
+0%
+b0 T!
+b0 U!
+b0 V!
+0W!
+b0 X!
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+01
+00
+0/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0e
+0d
+0c
+0b
+0a
+0`
+0_
+0^
+0]
+0\
+0[
+0Z
+0Y
+0X
+0W
+0V
+0U
+0T
+0S
+0R
+0Q
+0P
+0O
+0N
+0M
+0L
+0K
+0J
+0I
+0H
+0G
+0F
+0i
+0h
+0g
+0f
+0j
+0l
+0k
+0S!
+0R!
+0Q!
+0P!
+0O!
+0N!
+0M!
+0L!
+0K!
+0J!
+0I!
+0H!
+0G!
+0F!
+0E!
+0D!
+0C!
+0B!
+0A!
+0@!
+0?!
+0>!
+0=!
+0<!
+0;!
+0:!
+09!
+08!
+07!
+06!
+05!
+04!
+03!
+02!
+01!
+00!
+0/!
+0.!
+0-!
+0,!
+0+!
+0*!
+0)!
+0(!
+0'!
+0&!
+0%!
+0$!
+0#!
+0"!
+0!!
+0~
+0}
+0|
+0{
+0z
+0y
+0x
+0w
+0v
+0u
+0t
+0s
+0r
+0q
+0p
+0o
+0n
+0m
+$end
+#100000
+b1 "
+1#
+b10101010 $
+1%
+12!
+1Q!
+1O!
+1M!
+1K!
+11!
+1S!
+b10 X!
+b10 V!
+b1010101000000000 T!
+1W!
+1<
+1:
+18
+16
+1h
+1k
+1j
+#110000
+b1 !
+b10 "
+b1011101110111011 $
+1R!
+1N!
+1J!
+1I!
+1G!
+1F!
+1E!
+1C!
+01!
+10!
+1o
+0W!
+b0 T!
+b0 V!
+b0 X!
+b10 X!
+b1100 V!
+b10111011101110110000000000000000 T!
+1W!
+0h
+1g
+1f
+0<
+0:
+08
+06
+15
+14
+12
+11
+10
+1.
+1-
+1,
+1*
+1)
+1(
+1&
+#120000
+b10 !
+b100 "
+b11001100110011001100110011001100 $
+0R!
+0Q!
+1P!
+0N!
+0M!
+1L!
+0J!
+0I!
+1H!
+0F!
+0E!
+1D!
+1@!
+1?!
+1<!
+1;!
+18!
+17!
+14!
+13!
+00!
+1/!
+0o
+1n
+0W!
+b0 T!
+b0 V!
+b0 X!
+b10 X!
+b100 U!
+1W!
+1c
+0g
+0f
+05
+04
+02
+01
+00
+0.
+0-
+0,
+0*
+0)
+0(
+0&
+#130000
+b0 !
+b1000 "
+0#
+b11011101110111011101110111011101 $
+02!
+1R!
+1N!
+1J!
+1F!
+1B!
+1>!
+1:!
+16!
+0/!
+1.!
+0n
+0W!
+b0 U!
+b0 X!
+b1 V!
+0j
+1i
+0k
+0c

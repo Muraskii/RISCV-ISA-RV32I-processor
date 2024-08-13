@@ -1,0 +1,121 @@
+module load_unit (
+    input ahb_resp_in,
+    input [31:0] ms_riscv32_mp_dmdata_in,
+    input [1:0] iadder_out_1_to_0_in,
+    input load_unsigned_in,
+    input [1:0] load_size_in,
+    output reg [31:0] lu_output_out
+);
+
+// Initialize output register
+initial begin
+    lu_output_out = 32'b0;
+end
+
+always @(*) begin
+    if (!ahb_resp_in) begin
+        case (load_size_in)
+            2'b00: begin // LB or LBU - Load Byte
+                case (iadder_out_1_to_0_in)
+                    2'b00: lu_output_out = load_unsigned_in ? {24'b0, ms_riscv32_mp_dmdata_in[7:0]} : {{24{ms_riscv32_mp_dmdata_in[7]}}, ms_riscv32_mp_dmdata_in[7:0]};
+                    2'b01: lu_output_out = load_unsigned_in ? {24'b0, ms_riscv32_mp_dmdata_in[15:8]} : {{24{ms_riscv32_mp_dmdata_in[15]}}, ms_riscv32_mp_dmdata_in[15:8]};
+                    2'b10: lu_output_out = load_unsigned_in ? {24'b0, ms_riscv32_mp_dmdata_in[23:16]} : {{24{ms_riscv32_mp_dmdata_in[23]}}, ms_riscv32_mp_dmdata_in[23:16]};
+                    2'b11: lu_output_out = load_unsigned_in ? {24'b0, ms_riscv32_mp_dmdata_in[31:24]} : {{24{ms_riscv32_mp_dmdata_in[31]}}, ms_riscv32_mp_dmdata_in[31:24]};
+                    default: lu_output_out = 32'b0; // Default case for unexpected values
+                endcase
+            end
+            2'b01: begin // LH or LHU - Load Halfword
+                case (iadder_out_1_to_0_in[1])
+                    1'b0: lu_output_out = load_unsigned_in ? {16'b0, ms_riscv32_mp_dmdata_in[15:0]} : {{16{ms_riscv32_mp_dmdata_in[15]}}, ms_riscv32_mp_dmdata_in[15:0]};
+                    1'b1: lu_output_out = load_unsigned_in ? {16'b0, ms_riscv32_mp_dmdata_in[31:16]} : {{16{ms_riscv32_mp_dmdata_in[31]}}, ms_riscv32_mp_dmdata_in[31:16]};
+                    default: lu_output_out = 32'b0; // Default case for unexpected values
+                endcase
+            end
+            2'b10, 2'b11: begin // LW - Load Word
+                lu_output_out = ms_riscv32_mp_dmdata_in;
+            end
+            default: lu_output_out = 32'b0; // Default case for unexpected values
+        endcase
+    end else begin
+        lu_output_out = 32'b0; // Default when ahb_resp_in is active
+    end
+end
+
+endmodule
+
+module load_unit_tb;
+
+    // Testbench signals
+    reg [2:0] funct3_in;
+    reg ahb_resp_in;
+    reg [31:0] ms_riscv32_mp_dmdata_in;
+    reg [1:0] iadder_out_1_to_0_in;
+    wire [31:0] lu_output_out;
+
+    // Instantiate the load_unit module
+    load_unit uut (
+        .funct3_in(funct3_in),
+        .ahb_resp_in(ahb_resp_in),
+        .ms_riscv32_mp_dmdata_in(ms_riscv32_mp_dmdata_in),
+        .iadder_out_1_to_0_in(iadder_out_1_to_0_in),
+        .lu_output_out(lu_output_out)
+    );
+
+    // Test procedure
+    initial begin
+        // Initialize signals
+        funct3_in = 3'b000;
+        ahb_resp_in = 1;
+        ms_riscv32_mp_dmdata_in = 32'h12345678;
+        iadder_out_1_to_0_in = 2'b00;
+
+        // Wait for 10 time units
+        #10;
+        
+        // Test case 1: LB (Load Byte)
+        funct3_in = 3'b000; // LB
+        ahb_resp_in = 0; // Active low
+        iadder_out_1_to_0_in = 2'b00;
+        ms_riscv32_mp_dmdata_in = 32'h12345678; // Example data
+        #10;
+        $display("Test LB, Expected: 0x00000078, Got: 0x%08X", lu_output_out);
+
+        // Test case 2: LBU (Load Byte Unsigned)
+        funct3_in = 3'b100; // LBU
+        ahb_resp_in = 0; // Active low
+        iadder_out_1_to_0_in = 2'b01;
+        ms_riscv32_mp_dmdata_in = 32'h12345678; // Example data
+        #10;
+        $display("Test LBU, Expected: 0x00000056, Got: 0x%08X", lu_output_out);
+
+        // Test case 3: LH (Load Halfword)
+        funct3_in = 3'b001; // LH
+        ahb_resp_in = 0; // Active low
+        iadder_out_1_to_0_in = 2'b10;
+        ms_riscv32_mp_dmdata_in = 32'h12345678; // Example data
+        #10;
+        $display("Test LH, Expected: 0xFFFFFF34, Got: 0x%08X", lu_output_out);
+
+        // Test case 4: LHU (Load Halfword Unsigned)
+        funct3_in = 3'b101; // LHU
+        ahb_resp_in = 0; // Active low
+        iadder_out_1_to_0_in = 2'b11;
+        ms_riscv32_mp_dmdata_in = 32'h12345678; // Example data
+        #10;
+        $display("Test LHU, Expected: 0x00001234, Got: 0x%08X", lu_output_out);
+
+        // Test case 5: LW (Load Word)
+        funct3_in = 3'b010; // LW
+        ahb_resp_in = 0; // Active low
+        iadder_out_1_to_0_in = 2'b00;
+        ms_riscv32_mp_dmdata_in = 32'h12345678; // Example data
+        #10;
+        $display("Test LW, Expected: 0x12345678, Got: 0x%08X", lu_output_out);
+
+        // End simulation
+        $finish;
+    end
+
+endmodule
+
+

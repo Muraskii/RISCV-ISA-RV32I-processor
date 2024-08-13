@@ -1,0 +1,191 @@
+C:/intelFPGA_lite/Internship/mie_reg.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/mie_reg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mie_reg
+
+Top level modules:
+	mie_reg
+
+} {} {}} C:/intelFPGA_lite/Internship/mepc_and_mscratch_reg.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/mepc_and_mscratch_reg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mepc_and_mscratch_reg
+
+Top level modules:
+	mepc_and_mscratch_reg
+
+} {} {}} C:/intelFPGA_lite/Internship/csr_data_mux_unit.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/csr_data_mux_unit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module csr_data_mux_unit
+
+Top level modules:
+	csr_data_mux_unit
+
+} {} {}} C:/intelFPGA_lite/Internship/msrv32_machine_control.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/msrv32_machine_control.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module msrv32_machine_control
+
+Top level modules:
+	msrv32_machine_control
+
+} {} {}} C:/intelFPGA_lite/Internship/data_wr_mux_unit.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/data_wr_mux_unit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module data_wr_mux_unit
+
+Top level modules:
+	data_wr_mux_unit
+
+} {} {}} C:/intelFPGA_lite/Internship/WB_Mux.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/WB_Mux.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module WB_Mux
+
+Top level modules:
+	WB_Mux
+
+} {} {}} C:/intelFPGA_lite/Internship/msrv32_csr_file.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/msrv32_csr_file.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module msrv32_csr_file
+
+Top level modules:
+	msrv32_csr_file
+
+} {} {}} C:/intelFPGA_lite/Internship/mtvec_reg.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/mtvec_reg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mtvec_reg
+
+Top level modules:
+	mtvec_reg
+
+} {} {}} C:/intelFPGA_lite/Internship/machine_counter.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/machine_counter.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module machine_counter
+
+Top level modules:
+	machine_counter
+
+} {} {}} C:/intelFPGA_lite/Internship/imm_gen.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/imm_gen.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module imm_gen
+
+Top level modules:
+	imm_gen
+
+} {} {}} C:/intelFPGA_lite/Internship/PC_Mux.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/PC_Mux.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module PC_Mux
+
+Top level modules:
+	PC_Mux
+
+} {} {}} C:/intelFPGA_lite/Internship/Integer_File.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/Integer_File.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Integer_File
+
+Top level modules:
+	Integer_File
+
+} {} {}} C:/intelFPGA_lite/Internship/mstatus_reg.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/mstatus_reg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mstatus_reg
+
+Top level modules:
+	mstatus_reg
+
+} {} {}} C:/intelFPGA_lite/Internship/load_unit.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/load_unit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module load_unit
+
+Top level modules:
+	load_unit
+
+} {} {}} C:/intelFPGA_lite/Internship/mtval_reg.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/mtval_reg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mtval_reg
+
+Top level modules:
+	mtval_reg
+
+} {} {}} C:/intelFPGA_lite/Internship/reg_block1.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/reg_block1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module reg_block1
+
+Top level modules:
+	reg_block1
+
+} {} {}} C:/intelFPGA_lite/Internship/REGBLOCK_2.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/REGBLOCK_2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module REGBLOCK_2
+
+Top level modules:
+	REGBLOCK_2
+
+} {} {}} C:/intelFPGA_lite/Internship/Imm_adder.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/Imm_adder.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Imm_adder
+
+Top level modules:
+	Imm_adder
+
+} {} {}} C:/intelFPGA_lite/Internship/Instruction_Mux.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/Instruction_Mux.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Instruction_Mux
+
+Top level modules:
+	Instruction_Mux
+
+} {} {}} C:/intelFPGA_lite/Internship/misa_and_pre_data.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/misa_and_pre_data.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module misa_and_pre_data
+
+Top level modules:
+	misa_and_pre_data
+
+} {} {}} C:/intelFPGA_lite/Internship/mip_reg.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/mip_reg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mip_reg
+
+Top level modules:
+	mip_reg
+
+} {} {}} C:/intelFPGA_lite/Internship/mcause_reg.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/mcause_reg.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module mcause_reg
+
+Top level modules:
+	mcause_reg
+
+} {} {}} C:/intelFPGA_lite/Internship/store_unit.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/store_unit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module store_unit
+
+Top level modules:
+	store_unit
+
+} {} {}} C:/intelFPGA_lite/Internship/machine_counter_setup.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/machine_counter_setup.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module machine_counter_setup
+
+Top level modules:
+	machine_counter_setup
+
+} {} {}} C:/intelFPGA_lite/Internship/Wr_en_gen.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/Wr_en_gen.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Wr_en_gen
+
+Top level modules:
+	Wr_en_gen
+
+} {} {}} C:/intelFPGA_lite/Internship/Branch_Unit.v {1 {vlog -work work -stats=none C:/intelFPGA_lite/Internship/Branch_Unit.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Branch_unit
+
+Top level modules:
+	Branch_unit
+
+} {} {}} C:/intelFPGA_lite/Internship/Decoder.v {1 {vlog -work work -stats=none {C:\intelFPGA_lite\Internship\Decoder.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module Decoder
+-- Compiling module tb_Decoder
+
+Top level modules:
+	tb_Decoder
+
+} {} {}}
